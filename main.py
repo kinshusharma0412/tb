@@ -13,12 +13,12 @@ from time import time
 
 
 # bot
-with open('config.json', 'r') as f: DATA = load(f)
-def getenv(var): return environ.get(var) or DATA.get(var, None)
+#with open('config.json', 'r') as f: DATA = load(f)
+#def getenv(var): return environ.get(var) or DATA.get(var, None)
 
-bot_token = getenv("TOKEN")
-api_hash = getenv("HASH") 
-api_id = getenv("ID")
+bot_token = os.environ["bot_token"]
+api_hash = os.environ["api_hash"]
+api_id = os.environ["api_id"]
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)  
 
 
