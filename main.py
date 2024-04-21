@@ -2,6 +2,7 @@ import pyrogram
 from pyrogram import Client,filters
 from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
 from os import environ, remove
+
 from threading import Thread
 from json import load
 from re import search
@@ -16,9 +17,9 @@ from time import time
 #with open('config.json', 'r') as f: DATA = load(f)
 #def getenv(var): return environ.get(var) or DATA.get(var, None)
 
-bot_token = os.environ["bot_token"]
-api_hash = os.environ["api_hash"]
-api_id = os.environ["api_id"]
+bot_token = environ["bot_token"]
+api_hash = environ["api_hash"]
+api_id = environ["api_id"]
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)  
 
 
